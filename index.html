@@ -1,23 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>filmeskayque</title>
-</head>
-<body>
-    <h1>filmeskayque - catalago de filmes online</h1>
-</body>
-</html>
- 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>HTML Tutorial</title>
-</head>
-<body>
+<<<<<<< SEARCH
+                    {/* Modal de Login */}
+                    {showLogin && (
+                        <LoginModal 
+                            onClose={() => setShowLogin(false)}
+                            onLogin={handleLogin}
+                        />
+                    )}
+=======
+                    {/* Modal de Login */}
+                    {showLogin && (
+                        <LoginModal 
+                            onClose={() => setShowLogin(false)}
+                            onLogin={handleLogin}
+                            onForgotPassword={() => {
+                                setShowLogin(false);
+                                setShowForgotPassword(true);
+                            }}
+                        />
+                    )}
 
-The content of the document......
-
-</body>
-</html>
+                    {/* Modal de Recuperação de Senha */}
+                    {showForgotPassword && (
+                        <ForgotPasswordModal 
+                            onClose={() => setShowForgotPassword(false)}
+                            onBackToLogin={() => {
+                                setShowForgotPassword(false);
+                                setShowLogin(true);
+                            }}
+                        />
+                    )}
+>>>>>>> REPLACE

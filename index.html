@@ -1,46 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Top 10 Filmes do Mundo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
+    <div class="container">
+        <header>
+            <h1>Top 10 Filmes do Mundo</h1>
+        </header>
 
-        <form id="loginForm">
-            <div class="input-group">
-                <label for="emailPhone">Gmail ou Número de Telefone:</label>
-                <input type="text" id="emailPhone" placeholder="Digite seu Gmail ou número de telefone" required>
+        <div class="filme-container">
+            <!-- Filme 1 -->
+            <div class="filme">
+                <img src="https://via.placeholder.com/300x450?text=Filme+1" alt="Imagem do Filme 1">
+                <div class="descricao">
+                    <h2>Filme 1 - Título</h2>
+                    <p>Descrição do Filme 1. Uma breve descrição sobre o filme, destacando seus principais aspectos e enredo.</p>
+                    <div class="autores">
+                        <h3>Autores: Nome do Autor 1, Nome do Autor 2</h3>
+                    </div>
+                    <div class="diretor">
+                        <h3>Diretor: Nome do Diretor</h3>
+                    </div>
+                </div>
             </div>
 
-            <div class="input-group">
-                <label for="password">Senha:</label>
-                <input type="password" id="password" placeholder="Digite sua senha" required>
+            <!-- Filme 2 -->
+            <div class="filme">
+                <img src="https://via.placeholder.com/300x450?text=Filme+2" alt="Imagem do Filme 2">
+                <div class="descricao">
+                    <h2>Filme 2 - Título</h2>
+                    <p>Descrição do Filme 2. Uma breve descrição sobre o filme, destacando seus principais aspectos e enredo.</p>
+                    <div class="autores">
+                        <h3>Autores: Nome do Autor 1, Nome do Autor 2</h3>
+                    </div>
+                    <div class="diretor">
+                        <h3>Diretor: Nome do Diretor</h3>
+                    </div>
+                </div>
             </div>
 
-            <button type="submit">Entrar</button>
-        </form>
-
-        <div class="actions">
-            <p><a href="#" id="forgotPasswordLink">Esqueceu a senha?</a></p>
-            <p><a href="#">Cadastrar-se</a></p>
-        </div>
-
-        <!-- Modal de Recuperação de Senha -->
-        <div id="recoverPasswordModal" class="modal">
-            <div class="modal-content">
-                <h3>Recuperação de Senha</h3>
-                <label for="recoverEmailPhone">Digite seu e-mail ou telefone:</label>
-                <input type="text" id="recoverEmailPhone" placeholder="E-mail ou telefone" required>
-                <button id="recoverPasswordBtn">Recuperar Senha</button>
-                <button id="closeModalBtn">Fechar</button>
-            </div>
+            <!-- Repita o bloco de "Filme" para os outros 8 filmes -->
         </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

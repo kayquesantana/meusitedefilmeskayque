@@ -30,3 +30,37 @@
                         />
                     )}
 >>>>>>> REPLACE
+
+<<<<<<< SEARCH
+        const { useState, useEffect } = React;
+        const [currentUser, setCurrentUser] = useState(null);
+        const [showLogin, setShowLogin] = useState(false);
+        const [movies, setMovies] = useState([]);
+        const [searchTerm, setSearchTerm] = useState('');
+        const [isLoading, setIsLoading] = useState(true);
+=======
+        const { useState, useEffect } = React;
+        const [currentUser, setCurrentUser] = useState(null);
+        const [showLogin, setShowLogin] = useState(false);
+        const [showForgotPassword, setShowForgotPassword] = useState(false);
+        const [movies, setMovies] = useState([]);
+        const [searchTerm, setSearchTerm] = useState('');
+        const [isLoading, setIsLoading] = useState(true);
+>>>>>>> REPLACE
+Code Changes:
+
+diff
+
+Run
+Copy code
+<<<<<<< SEARCH
+        // Componente de modal de login
+        const LoginModal = ({ onClose, onLogin }) => {
+            const [email, setEmail] = useState('');
+            const [password, setPassword] = useState('');
+=======
+        // Componente de modal de login
+        const LoginModal = ({ onClose, onLogin, onForgotPassword }) => {
+            const [email, setEmail] = useState('');
+            const [password, setPassword] = useState('');
+>>>>>>> REPLACE

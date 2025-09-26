@@ -1,66 +1,46 @@
-<<<<<<< SEARCH
-                    {/* Modal de Login */}
-                    {showLogin && (
-                        <LoginModal 
-                            onClose={() => setShowLogin(false)}
-                            onLogin={handleLogin}
-                        />
-                    )}
-=======
-                    {/* Modal de Login */}
-                    {showLogin && (
-                        <LoginModal 
-                            onClose={() => setShowLogin(false)}
-                            onLogin={handleLogin}
-                            onForgotPassword={() => {
-                                setShowLogin(false);
-                                setShowForgotPassword(true);
-                            }}
-                        />
-                    )}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
 
-                    {/* Modal de Recuperação de Senha */}
-                    {showForgotPassword && (
-                        <ForgotPasswordModal 
-                            onClose={() => setShowForgotPassword(false)}
-                            onBackToLogin={() => {
-                                setShowForgotPassword(false);
-                                setShowLogin(true);
-                            }}
-                        />
-                    )}
->>>>>>> REPLACE
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="emailPhone">Gmail ou Número de Telefone:</label>
+                <input type="text" id="emailPhone" placeholder="Digite seu Gmail ou número de telefone" required>
+            </div>
 
-<<<<<<< SEARCH
-        const { useState, useEffect } = React;
-        const [currentUser, setCurrentUser] = useState(null);
-        const [showLogin, setShowLogin] = useState(false);
-        const [movies, setMovies] = useState([]);
-        const [searchTerm, setSearchTerm] = useState('');
-        const [isLoading, setIsLoading] = useState(true);
-=======
-        const { useState, useEffect } = React;
-        const [currentUser, setCurrentUser] = useState(null);
-        const [showLogin, setShowLogin] = useState(false);
-        const [showForgotPassword, setShowForgotPassword] = useState(false);
-        const [movies, setMovies] = useState([]);
-        const [searchTerm, setSearchTerm] = useState('');
-        const [isLoading, setIsLoading] = useState(true);
->>>>>>> REPLACE
-Code Changes:
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+            </div>
 
-diff
+            <button type="submit">Entrar</button>
+        </form>
 
-Run
-Copy code
-<<<<<<< SEARCH
-        // Componente de modal de login
-        const LoginModal = ({ onClose, onLogin }) => {
-            const [email, setEmail] = useState('');
-            const [password, setPassword] = useState('');
-=======
-        // Componente de modal de login
-        const LoginModal = ({ onClose, onLogin, onForgotPassword }) => {
-            const [email, setEmail] = useState('');
-            const [password, setPassword] = useState('');
->>>>>>> REPLACE
+        <div class="actions">
+            <p><a href="#" id="forgotPasswordLink">Esqueceu a senha?</a></p>
+            <p><a href="#">Cadastrar-se</a></p>
+        </div>
+
+        <!-- Modal de Recuperação de Senha -->
+        <div id="recoverPasswordModal" class="modal">
+            <div class="modal-content">
+                <h3>Recuperação de Senha</h3>
+                <label for="recoverEmailPhone">Digite seu e-mail ou telefone:</label>
+                <input type="text" id="recoverEmailPhone" placeholder="E-mail ou telefone" required>
+                <button id="recoverPasswordBtn">Recuperar Senha</button>
+                <button id="closeModalBtn">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

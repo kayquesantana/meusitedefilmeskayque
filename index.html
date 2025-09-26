@@ -1,11 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top 10 Filmes do Mundo</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Resetando algumas propriedades padrões do navegador */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 3rem;
+        }
+
+        .filme-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .filme {
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .filme:hover {
+            transform: translateY(-10px);
+        }
+
+        .filme img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid white;
+        }
+
+        .descricao {
+            padding: 20px;
+        }
+
+        .descricao h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .descricao p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .autores, .diretor {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .autores h3, .diretor h3 {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .filme-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .filme-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -44,96 +131,53 @@
                 </div>
             </div>
 
-            <!-- Repita o bloco de "Filme" para os outros 8 filmes -->
+            <!-- Filme 3 -->
+            <div class="filme">
+                <img src="https://via.placeholder.com/300x450?text=Filme+3" alt="Imagem do Filme 3">
+                <div class="descricao">
+                    <h2>Filme 3 - Título</h2>
+                    <p>Descrição do Filme 3. Uma breve descrição sobre o filme, destacando seus principais aspectos e enredo.</p>
+                    <div class="autores">
+                        <h3>Autores: Nome do Autor 1, Nome do Autor 2</h3>
+                    </div>
+                    <div class="diretor">
+                        <h3>Diretor: Nome do Diretor</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filme 4 -->
+            <div class="filme">
+                <img src="https://via.placeholder.com/300x450?text=Filme+4" alt="Imagem do Filme 4">
+                <div class="descricao">
+                    <h2>Filme 4 - Título</h2>
+                    <p>Descrição do Filme 4. Uma breve descrição sobre o filme, destacando seus principais aspectos e enredo.</p>
+                    <div class="autores">
+                        <h3>Autores: Nome do Autor 1, Nome do Autor 2</h3>
+                    </div>
+                    <div class="diretor">
+                        <h3>Diretor: Nome do Diretor</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filme 5 -->
+            <div class="filme">
+                <img src="https://via.placeholder.com/300x450?text=Filme+5" alt="Imagem do Filme 5">
+                <div class="descricao">
+                    <h2>Filme 5 - Título</h2>
+                    <p>Descrição do Filme 5. Uma breve descrição sobre o filme, destacando seus principais aspectos e enredo.</p>
+                    <div class="autores">
+                        <h3>Autores: Nome do Autor 1, Nome do Autor 2</h3>
+                    </div>
+                    <div class="diretor">
+                        <h3>Diretor: Nome do Diretor</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repita o bloco de "Filme" para os outros 5 filmes -->
         </div>
     </div>
 </body>
 </html>
-
-/* Resetando algumas propriedades padrões do navegador */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
-header h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 3rem;
-}
-
-.filme-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.filme {
-    background-color: #333;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.filme:hover {
-    transform: translateY(-10px);
-}
-
-.filme img {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid white;
-}
-
-.descricao {
-    padding: 20px;
-}
-
-.descricao h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.descricao p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.autores, .diretor {
-    font-size: 0.9rem;
-    color: #aaa;
-}
-
-.autores h3, .diretor h3 {
-    margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-    .filme-container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .filme-container {
-        grid-template-columns: 1fr;
-    }
-}
